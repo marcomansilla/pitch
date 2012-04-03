@@ -17,6 +17,11 @@ def index():
     response.flash = "Welcome to web2py!"
     return dict(message=T('Hello World'))
 
+def entry_post():
+    form = crud.create(db.post)
+
+    return dict(form=form)
+
 def user():
     """
     exposes:
