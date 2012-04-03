@@ -79,3 +79,7 @@ use_janrain(auth,filename='private/janrain.key')
 ## >>> for row in rows: print row.id, row.myfield
 #########################################################################
 
+db.define_table('post',
+    Field('content','text'),
+    Field('user',db.auth_user)
+    )
